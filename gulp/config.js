@@ -29,7 +29,7 @@ module.exports = {
 	browserify: {
 		// Enable sourcemaps
 		debug: true,
-		extensions: ['.jade'],
+		extensions: ['.js', '.json', '.jsx'],
 		bundleConfigs: [{
 			entries: source + '/scripts/app.js',
 			dest: dest,

@@ -1,12 +1,24 @@
-var React = require('react');
-//var home = require('../layout/home.jade');
+import React from 'react';
+import router from './core/Router.js';
+import Promise from 'bluebird';
+import request from 'browser-request';
 
-class Foo{
-	constructor(){
-		console.log("Foo is awesome");
+
+class App{
+	
+	constructor(router, appRoot){
+		this.router = router;
+		this.appRoot = appRoot;
+		this.router.run(this.routerInitialized);
+		this.http = Promise.promisifyAll(request);
+	}
+	
+	routerInitialized (Handler, state){
+		console.log(state);
+		React.render(<Handler />, this.appRoot);
 	}
 }
 
-var f = new Foo();
-console.log(f);
+var app = new App(router, document.body);
 
+export default app; 

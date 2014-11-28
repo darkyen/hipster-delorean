@@ -14,23 +14,23 @@ gulp.task('browserify', function(callback){
 	
 	function CreateBundle(b_config){
 		var bundler = browserify({
-				// use in memory caches
-				cache: {},
-				packageCache: {},
-				fullPaths: true,
-				// Use them later
-				extensions: config.extensions,
-				// To toggle sourcemaps
-				debug: config.debug,
-				entries: b_config.entries
-			});
+			// use in memory caches
+			cache: {},
+			packageCache: {},
+			fullPaths: true,
+			// Use them later
+			extensions: config.extensions,
+			// To toggle sourcemaps
+			debug: config.debug,
+			entries: b_config.entries
+		});
 
-			if( b_config.skipTransform !== true ){
-			  	bundler.transform(reactify)
-			  		.transform(es6ify)
-			  		.transform(react_jade)
-				
-			}
+		if( b_config.skipTransform !== true ){
+			// Create a bundler, with both js and jsx files
+		  	bundler.transform(reactify)
+		  		.transform(es6ify);
+		}
+
 		var bundle = function(){
 			// Create a logger when it starts logging
 			bundleLogger.start(b_config.outputName);
@@ -66,4 +66,5 @@ gulp.task('browserify', function(callback){
 	var bundleQueue = config.bundleConfigs;
 	var bundleQueueLen = bundleQueue.length;
 	bundleQueue.forEach(CreateBundle);
+
 });
