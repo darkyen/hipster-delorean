@@ -1,0 +1,54 @@
+{
+  "name": "hipster-delorean",
+  "version": "0.0.1",
+  "description": "An opinionated hipster toolkit for deloreanjs with gulp, sass, livereload, traceur and more",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darkyen/hispter-delorean.git"
+  },
+  "keywords": [
+    "delorean",
+    "react",
+    "flux"
+  ],
+  "author": "Abhishek Hingnikar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darkyen/hispter-delorean/issues"
+  },
+  "homepage": "https://github.com/darkyen/hispter-delorean",
+  "dependencies": {
+    "bluebird": "^2.3.11",
+    "browser-request": "^0.3.3",
+    "browser-sync": "^1.7.1",
+    "browserify": "^6.3.3",
+    "delorean": "^0.8.6",
+    "es6ify": "^1.5.1",
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-changed": "^1.0.0",
+    "gulp-imagemin": "^2.0.0",
+    "gulp-notify": "^2.0.1",
+    "gulp-sass": "^1.1.0",
+    "gulp-sourcemaps": "^1.2.8",
+    "gulp-util": "^3.0.1",
+    "gulp-watch": "^2.0.0",
+    "jshint": "^2.5.10",
+    "lodash": "^2.4.1",
+    "pretty-hrtime": "^0.2.2",
+    "react": "^0.12.1",
+    "react-jade": "^2.1.0",
+    "react-router": "^0.11.3",
+    "reactify": "^0.17.1",
+    "require-dir": "^0.1.0",
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "^2.1.1"
+  },
+  "devDependencies": {
+    "gulp-s3": "^0.3.0"
+  }
+}
