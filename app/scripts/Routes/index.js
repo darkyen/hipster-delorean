@@ -1,24 +1,17 @@
-import Router from 'react-router';
 import React from 'react';
+import IndexPage from '../views/index.js';
 
-var {Route, DefaultRoute, RouteHandler, Link} = Router;
+console.log(IndexPage);
 
-var App = React.createClass({
-	render (){
-		return (
-			<div className="foo">
-				<h1>Hello Flux</h1>
-				<div>
-					<RouteHandler></RouteHandler>
-				</div>
-			</div>
-		);
-	}
+var IndexController = React.createClass({
+	
+	getInitialState: function(){
+		return {
+			cusines: ['veg', 'non-veg', 'goan']
+		}
+	},
+
+	render: IndexPage
 });
 
-var routes = (
-	<Route path="/" handler={App}></Route>
-);
-
-
-export default routes;
+export default IndexController;

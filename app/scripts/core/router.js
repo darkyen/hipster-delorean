@@ -1,4 +1,4 @@
-import routes from './../Routes/index.js';
+import routes from './../Routes/all.js';
 import Router from 'react-router';
 
 var router = Router.create({
