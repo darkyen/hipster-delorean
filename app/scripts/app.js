@@ -4,6 +4,8 @@ import Promise from 'bluebird';
 import request from 'browser-request';
 import DeLorean from 'delorean';
 
+var Flux = DeLorean.Flux;
+
 class App{
 	
 	constructor(router, appRoot){

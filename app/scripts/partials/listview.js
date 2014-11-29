@@ -8,9 +8,9 @@ var GenericListElement = React.createClass({
 	},
 	render(){
 		return (
-			<div className="list-element">
+			<li className="list-element">
 				<this.props.renderer source={this.props.source}></this.props.renderer>
-			</div>
+			</li>
 		);
 	}
 });
@@ -24,21 +24,20 @@ var GenericList = React.createClass({
 	render: function(){
 		var elementRenderer = this.props.elementRenderer;		
 		var onClick = this.props.onClick;
-
-		listElements = this.props.source.map(function(element){
+		var listElements = this.props.source.map(function(element){
 			return (
-						<GenericListElement 
-							onClick={onClick} 
-							renderer={elementRenderer} 
-							source={element}/>
-					);
+					<GenericListElement 
+						onClick={onClick} 
+						renderer={elementRenderer} 
+						source={element}/>
+			);
 		});
 
 		return (
 			<div className="list-view">
-				<div className="list-view-inner">
+				<ul className="list-unstyled list-inline list-view-inner">
 					{listElements}
-				</div>
+				</ul>
 			</div>
 		);
 	}

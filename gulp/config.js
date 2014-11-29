@@ -13,13 +13,15 @@ module.exports = {
 		]
 	},
 	sass: {
-		src: source + '/styles/*.{sass,scss}',
+		src: source + '/styles/main.scss',
 		dest: dest,
 		settings: {
-			// Muhahaha foolish mortal thou shal read source maps
-			// See https://github.com/dlmanning/gulp-sass/issues/81
-			sourceComments: 'map',
-			imagePath: '/img'
+			trace: true,
+			compass: true,
+			loadPath: [
+				'./node_modules/bootstrap-sass/assets/stylesheets/'
+			],
+			style: 'compressed',
 		}
 	},
 	images: {

@@ -1,12 +1,12 @@
 import React from 'react';
-import List from '../partials/listview';
-import CuisineElement from '../partials/CuisineElement';
+import {List} from '../partials/listview';
+import CuisineElement from '../partials/cusineelement';
 
 export default function IndexPage(){
 	return (
 		<section>
 			<div className="container">
-				<List></List>
+				<List source={this.state.cusines} elementRenderer={CuisineElement}></List>
 			</div>
 		</section>
 	);
